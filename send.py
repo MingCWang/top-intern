@@ -15,6 +15,7 @@ def send_email(job_data):
     subject = 'Meta Job'
     if len(job_data) == 0:
         subject += 'No new jobs found!'
+        body = '=='
     elif job_data[-1]['status'] == 'completed':
         subject += 'Collected!'
         job_data.pop()

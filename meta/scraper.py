@@ -49,14 +49,14 @@ def main():
         old_data = json.load(file)
 
     if len(old_data) == 0: 
-        with open("data.json", "w") as file:
+        with open("new.json", "w") as file:
             json.dump(data_list, file, indent=4)
     else:    
         new_list = [job for job in data_list if job not in old_data]
-        with open("data.json", "w") as file:
-                    json.dump(data_list, file, indent=4)
         with open("new.json", "w") as file:
             json.dump(new_list, file, indent=4)
+    with open("data.json", "w") as file:
+            json.dump(data_list, file, indent=4)
     print("\n========== DOWNLOAD COMPLETED ===========\n")
 
 
