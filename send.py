@@ -66,13 +66,7 @@ def main():
     job_data = []
     meta = Meta()
     meta_list = meta.run()
-    print(meta_list)
     job_data.extend([meta_list])
-    job_data.extend([meta_list])
-    
-    print(job_data)
-    
- 
 
     send_email(job_data)
  
