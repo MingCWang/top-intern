@@ -55,13 +55,13 @@ def main():
     else:    
         new_list = []
         
-        for job in data_list:
-            if job['status'] != None:
-                new_list.append(job)
+        for i in range(len(data_list)):
+            if i == len(data_list) - 1:
+                new_list.append(data_list[i])
                 break
-            if job in old_data:
+            if data_list[i] in old_data:
                 continue
-            new_list.append(job)
+            new_list.append(data_list[i])
             
         with open("new.json", "w") as file:
             json.dump(new_list, file, indent=4)
