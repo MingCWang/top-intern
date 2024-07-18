@@ -1,8 +1,9 @@
 # top-intern
 
 ## Purpose
-There are many existing github repositories that provide lists of internships and new grad positions. However, these repositories are often outdated and do not provide the most up-to-date information, and for someone that is aiming for the top of the top positions it is important to have the most up-to-date information down to the minute.
-**The project is to create a system that sends notification exclusivley on FAANG internship/new grad positions in the United States. (maximum latency is 1 hour).**
+There are many existing github repositories that provide lists of internships and new grad positions. However, these repositories are often outdated and do not provide the most up-to-date information, and for someone that is aiming for the top of the top positions it is important to have the most up-to-date information.
+
+_**The project is to create a system that sends notification exclusivley on FAANG internship/new grad positions in the United States. (updates every hour).**_
 
 ## Features
 - Users can recieve notifications on new FAANG internship/new grad positions in the United States through sms or email.
