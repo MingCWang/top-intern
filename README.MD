@@ -13,7 +13,7 @@ This code leverages OOP allowing easy addition of new companies.:
 - `/scrape` directory contains the main class that other company child classes inherit from. 
 - `/[company]` directory contains the classes that scrape the respective company's career page. 
 
-To add a company, one would only need to complete two functions `find_job_list()` and `get_job_data()` in each child class. 
+To add a company, one would only need to complete two functions `find_job_list()` and `get_job_data()` in each child class. Look at (meta.py)[./meta/meta.py] for example
 
 ## Disclaimer
 This web scraper is designed to operate in full compliance with legal and ethical standards to ensure responsible and lawful data extraction. Below are the key practices and guidelines our scraper follows:
