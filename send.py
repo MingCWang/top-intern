@@ -19,6 +19,7 @@ def send_email(job_data):
     elif job_data[-1]['status'] == 'completed':
         subject += 'Collected!'
         job_data.pop()
+        body = ''
         for job in job_data:
             body += f"\nJob Name: {job['jobName']}\nJob URL: {job['jobURL']}"
     else:
