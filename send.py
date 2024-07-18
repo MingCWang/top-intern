@@ -22,7 +22,7 @@ def send_email(job_data):
             body += f"\nJob Name: {job['jobName']}\nJob URL: {job['jobURL']}"
     else:
         subject = 'Meta Job data scraping failed!'
-        body = ''
+        body = ':('
     
   
     # Create a multipart message
