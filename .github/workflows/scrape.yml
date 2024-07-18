@@ -32,5 +32,5 @@ jobs:
           run: |
             git push origin main || echo "No changes to push"
           env:
-            github_token: ${{ secrets.GITHUB_TOKEN }}
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               
