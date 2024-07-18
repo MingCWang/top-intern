@@ -9,7 +9,7 @@ def send_email(job_data):
     smtp_server = 'smtp.gmail.com'
     smtp_port = 587
     sender_email = 'deiseval26@gmail.com'
-    sender_password = os.environ.get('GMAIL_PASSWORD')
+    sender_password = os.environ.get('GMAIL_PWD')
     receiver_email = 'mingshihwang@brandeis.edu'
     # Create the email content
     subject = 'Meta Job'
