@@ -4,11 +4,7 @@
 
 _**This is a system that sends notifications exclusively on FAANG internship/new grad positions in the United States. (updates every hour).**_
 
-There are many existing github repositories that provide lists of internships and new grad positions. However, I find these repositories often do not provide the most up-to-date information. For the ones that are up-to-date, there's no way for me to only receive notifications on the companies I want to get notified of, over time I stopped checking notifications from them. For someone who is aiming for the top of the top positions, it is important to have the most up-to-date information, but also not have to waste time checking the company pages constantly (more time to leetcode of course).
-
-## Features
-- Users can recieve notifications on new FAANG internship/new grad positions in the United States through sms or email.
-- Users can view the most up-to-date FAANG internship/new grad positions in the United States.
+Many existing github repositories provide lists of internships and new grad positions. However, I find these repositories are often out of date. For the up-to-date ones, there's no way for me to receive notifications only from the companies I care about, over time I stopped checking notifications. For someone who is aiming for the top of the top positions, it is important to have the most up-to-date information, but also not have to waste time checking the company pages constantly (more time to leetcode of course).
 
 ## Understanding the Code
 This code leverages OOP allowing easy addition of new companies.:
