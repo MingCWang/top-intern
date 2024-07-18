@@ -28,5 +28,9 @@ jobs:
             git add data.json
             git add new.json
             git commit -m "Update data" || echo "No changes to commit"
+        - name: Push changes
+          run: |
             git push origin main || echo "No changes to push"
+          env:
+            github_token: ${{ secrets.GITHUB_TOKEN }}
               
