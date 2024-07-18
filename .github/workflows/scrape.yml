@@ -23,4 +23,10 @@ jobs:
           run: python3 send.py    
           env:
             GMAIL_PWD: ${{ secrets.GMAIL_PWD }}
-  
+        - name: Update new data
+          run: |
+            git add data.json
+            git add new.json
+            git commit -m "Update data" || echo "No changes to commit"
+            git push origin main || echo "No changes to push"
+              
