@@ -3,6 +3,7 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import json
 import os
+from meta.meta import Meta
 
 def send_email(job_data):
     # Email configuration
@@ -11,25 +12,32 @@ def send_email(job_data):
     sender_email = 'deiseval26@gmail.com'
     sender_password = os.environ['GMAIL_PWD']
     receiver_email = 'mingshihwang@brandeis.edu'
-    # Create the email content
-    subject = 'Meta Job'
-    if len(job_data) - 1 == 0:
-        subject += ' No new jobs found!'
-        body = '=='
-        print('No new jobs found!')
-    elif job_data[-1]['status'] == 'completed':
-        subject += 'Collected!'
-        job_data.pop()
-        body = ''
-        for job in job_data:
-            body += f"\nJob Name: {job['jobName']}\nJob URL: {job['jobURL']}"
-        print('found new jobs!')
-    else:
-        subject = 'Meta Job data scraping failed!'
-        body = ':('
-        print('Scraping failed!')
     
-  
+    have_new_jobs = False
+    body = ''
+    subject = ''
+    # Create the email content
+    for job in job_data:
+        company = job[-1]['company']
+        if len(job) - 2 == 0:
+            body += f'<p style="font-family: Arial, sans-serif; font-size: 14px;">No new {company} jobs found</p>'
+            print(f'No new jobs {company} found!')
+        elif job[-2]['status'] == 'completed':
+            job_data.pop()  # remove the status key
+            job_data.pop()  # remove the company key
+            body += f'<h2 style="font-family: Arial, sans-serif; font-size: 16px; color: #4CAF50;">New {company} jobs!</h2>'
+            for j in job:
+                body += f"<p style='font-family: Arial, sans-serif; font-size: 14px;'><strong>Job Name:</strong> {j['jobName']}<br><strong>Job URL:</strong> <a href='{j['jobURL']}'>{j['jobURL']}</a></p>"
+            print(f'Found new {company} jobs!')
+            have_new_jobs = True
+        else:
+            body += f'<p style="font-family: Arial, sans-serif; font-size: 14px; color: red;">Scraping for {company} failed :(</p>'
+            print(f'Scraping {company} failed!')
+    if have_new_jobs:
+        subject = 'It\'s go time !'
+    else:
+        subject = 'No New Jobs Found'
+        
     # Create a multipart message
     msg = MIMEMultipart()
     msg['From'] = sender_email
@@ -55,11 +63,21 @@ def send_email(job_data):
 
 def main():
     
-    with open("new.json", "r") as file:
-        # Send the email after scraping
-        data = json.load(file)
-        send_email(data)
+    job_data = []
+    meta = Meta()
+    meta_list = meta.run()
+    print(meta_list)
+    job_data.extend([meta_list])
+    job_data.extend([meta_list])
+    
+    print(job_data)
+    
+ 
 
-
+    send_email(job_data)
+ 
+ 
+    
+    
 main()
 

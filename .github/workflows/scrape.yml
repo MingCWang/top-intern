@@ -1,6 +1,6 @@
 on:
     schedule:
-      - cron: '0 8 * * *'
+      - cron: '0 * * * *'
     push:
       branches: main
 name: Scrape Jobs
@@ -17,10 +17,8 @@ jobs:
             python-version: '3.x'
         - name: Install dependencies
           run: pip install -r requirements.txt
-        - name: Scrape the data
-          run: python3 meta/scraper.py
-        - name: Send updates
-          run: python3 send.py    
+        - name: Scrape data and send email
+          run: python3 send.py
           env:
             GMAIL_PWD: ${{ secrets.GMAIL_PWD }}
         - name: Update new data
