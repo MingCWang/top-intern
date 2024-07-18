@@ -1,0 +1,25 @@
+on:
+    schedule:
+      - cron: '10 21 * * *'
+    push:
+      branches: main
+name: Scrape Jobs
+jobs:
+    render:
+      name: Scrape Jobs
+      runs-on: macOS-latest
+      steps:
+        - uses: actions/checkout@v2
+        - name: Set up Python
+          uses: actions/setup-python@v2
+          with:
+            python-version: '3.x'
+        - name: Install dependencies
+          run: pip install -r requirements.txt
+        - name: Scrape the data
+          run: python3 meta/scraper.py
+        - name: Send updates
+          run: python3 send.py    
+          env:
+            GMAIL_PWD: ${{ env.GMAIL_PWD }}
+  
