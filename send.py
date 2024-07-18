@@ -14,7 +14,7 @@ def send_email(job_data):
     receiver_email = 'mingshihwang@brandeis.edu'
     # Create the email content
     subject = 'Meta Job'
-    if len(job_data) == 0:
+    if len(job_data) - 1 == 0:
         subject += 'No new jobs found!'
         body = '=='
     elif job_data[-1]['status'] == 'completed':
