@@ -35,8 +35,9 @@ def scraper(driver):
                 job_list_data.append({"status": "completed"}) 
                 return job_list_data
     except Exception as e:
-        with open("backup.json", "w") as file:
-                json.dump(job_list, file, indent=4)
+        print("Error: ", e)
+        job_list_data.append({"status": "failed"})
+        return job_list_data
  
 
 
@@ -52,7 +53,16 @@ def main():
         with open("new.json", "w") as file:
             json.dump(data_list, file, indent=4)
     else:    
-        new_list = [job for job in data_list if job not in old_data]
+        new_list = []
+        
+        for job in data_list:
+            if job['status'] != None:
+                new_list.append(job)
+                break
+            if job in old_data:
+                continue
+            new_list.append(job)
+            
         with open("new.json", "w") as file:
             json.dump(new_list, file, indent=4)
     with open("data.json", "w") as file:
