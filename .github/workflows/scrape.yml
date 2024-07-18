@@ -23,8 +23,7 @@ jobs:
             GMAIL_PWD: ${{ secrets.GMAIL_PWD }}
         - name: Update new data
           run: |
-            git add data.json
-            git add new.json
+            git add '*.json'
             git commit -m "Update data" || echo "No changes to commit"
             git push origin main || echo "No changes to push"
 

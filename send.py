@@ -45,7 +45,7 @@ def send_email(job_data):
     msg['Subject'] = subject
 
     # Attach the body with the msg instance
-    msg.attach(MIMEText(body, 'plain'))
+    msg.attach(MIMEText(body, 'html'))
 
     try:
         # Connect to the server and send the email
