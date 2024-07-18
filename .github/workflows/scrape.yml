@@ -22,5 +22,5 @@ jobs:
         - name: Send updates
           run: python3 send.py    
           env:
-            GMAIL_PWD: ${{ env.GMAIL_PWD }}
+            GMAIL_PWD: ${{ secrets.GMAIL_PWD }}
   
