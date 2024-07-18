@@ -10,22 +10,24 @@ def send_email(job_data):
     smtp_port = 587
     sender_email = 'deiseval26@gmail.com'
     sender_password = os.environ['GMAIL_PWD']
-    print('hey', sender_password)
     receiver_email = 'mingshihwang@brandeis.edu'
     # Create the email content
     subject = 'Meta Job'
     if len(job_data) - 1 == 0:
-        subject += 'No new jobs found!'
+        subject += ' No new jobs found!'
         body = '=='
+        print('No new jobs found!')
     elif job_data[-1]['status'] == 'completed':
         subject += 'Collected!'
         job_data.pop()
         body = ''
         for job in job_data:
             body += f"\nJob Name: {job['jobName']}\nJob URL: {job['jobURL']}"
+        print('found new jobs!')
     else:
         subject = 'Meta Job data scraping failed!'
         body = ':('
+        print('Scraping failed!')
     
   
     # Create a multipart message
@@ -56,7 +58,6 @@ def main():
     with open("new.json", "r") as file:
         # Send the email after scraping
         data = json.load(file)
-        print('hey')
         send_email(data)
 
 
