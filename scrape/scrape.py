@@ -62,8 +62,9 @@ class Scrape:
         """main scraper function"""
         job_list_data = []
         job_count = 0
+        retry = 0
         try:
-            while job_count == 0:
+            while retry < 20 and job_count == 0:
                 job_list = self.find_job_list(driver)
                 print("Total jobs found: ", len(job_list))
                 for i in tqdm(range(len(job_list))):  
@@ -74,12 +75,13 @@ class Scrape:
                     data = self.get_job_data(job_list, i, driver)
                     job_list_data.append(data)
                     job_count += 1
-                if job_count == 0:
-                    continue
-                else:
+                if job_count != 0:
                     job_list_data.append({"status": "completed"}) 
                     job_list_data.append({"company": f"{self.company}"})
                     return job_list_data
+            job_list_data.append({"status": "completed"}) 
+            job_list_data.append({"company": f"{self.company}"})
+            return job_list_data
         except Exception as e:
             print("Error: ", e)
             job_list_data.append({"status": "failed"})
