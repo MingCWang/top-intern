@@ -23,8 +23,8 @@ def send_email(job_data):
             body += f'<p style="font-family: Arial, sans-serif; font-size: 14px;">No new {company} jobs found</p>'
             print(f'No new jobs {company} found!')
         elif job[-2]['status'] == 'completed':
-            job_data.pop()  # remove the status key
-            job_data.pop()  # remove the company key
+            job.pop()  # remove the status key
+            job.pop()  # remove the company key
             body += f'<h2 style="font-family: Arial, sans-serif; font-size: 16px; color: #4CAF50;">New {company} jobs!</h2>'
             for j in job:
                 body += f"<p style='font-family: Arial, sans-serif; font-size: 14px;'><strong>Job Name:</strong> {j['jobName']}<br><strong>Job URL:</strong> <a href='{j['jobURL']}'>{j['jobURL']}</a></p>"
