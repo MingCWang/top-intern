@@ -19,10 +19,8 @@ def send_email(job_data):
     # Create the email content
     for job in job_data:
         company = job[-1]['company']
-        if len(job) - 2 == 0:
-            body += f'<p style="font-family: Arial, sans-serif; font-size: 14px;">No new {company} jobs found</p>'
-            print(f'No new jobs {company} found!')
-        elif job[-2]['status'] == 'completed':
+    
+        if job[-2]['status'] == 'completed':
             job.pop()  # remove the status key
             job.pop()  # remove the company key
             body += f'<h2 style="font-family: Arial, sans-serif; font-size: 16px; color: #4CAF50;">New {company} jobs!</h2>'
@@ -30,9 +28,12 @@ def send_email(job_data):
                 body += f"<p style='font-family: Arial, sans-serif; font-size: 14px;'><strong>Job Name:</strong> {j['jobName']}<br><strong>Job URL:</strong> <a href='{j['jobURL']}'>{j['jobURL']}</a></p>"
             print(f'Found new {company} jobs!')
             have_new_jobs = True
-        else:
+        elif job[-2]['status'] == 'failed':
             body += f'<p style="font-family: Arial, sans-serif; font-size: 14px; color: red;">Scraping for {company} failed :(</p>'
             print(f'Scraping {company} failed!')
+        elif len(job) - 2 == 0:
+            body += f'<p style="font-family: Arial, sans-serif; font-size: 14px;">No new {company} jobs found</p>'
+            print(f'No new jobs {company} found!')
     if have_new_jobs:
         subject = 'It\'s go time !'
     else:
