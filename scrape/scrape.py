@@ -23,7 +23,6 @@ class Scrape:
         if len(old_data) == 0: 
             with open(f"companies/{self.company}/new.json", "w") as file:
                 json.dump(self.data_list, file, indent=4)
-            return self.data_list
         else:    
             new_list = []
         
@@ -40,6 +39,8 @@ class Scrape:
                 json.dump(new_list, file, indent=4)
         with open(f"companies/{self.company}/data.json", "w") as file:
                 json.dump(self.data_list, file, indent=4)
+                return self.data_list
+            
         print("\n========== DOWNLOAD COMPLETED ===========\n")
         
         return new_list
