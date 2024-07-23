@@ -4,6 +4,7 @@ from email.mime.text import MIMEText
 import json
 import os
 from meta.meta import Meta
+from tiktok.tiktok import Tiktok
 
 def send_email(job_data):
     # Email configuration
@@ -69,6 +70,10 @@ def main():
     meta_list = meta.run()
     job_data.extend([meta_list])
 
+    tiktok = Tiktok()
+    tiktok_list = tiktok.run()
+    job_data.extend([tiktok_list])	
+ 
     send_email(job_data)
  
  

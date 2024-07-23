@@ -53,7 +53,6 @@ class Scrape:
         driver = webdriver.Chrome(options=chrome_options) # use this line if you want to run the scraper in the background
         driver.maximize_window()
         # driver = webdriver.Chrome()
-        # driver.get("https://jobs.careers.microsoft.com/global/en/search?lc=United%20States&d=Software%20Engineering&exp=Students%20and%20graduates&l=en_us&pg=1&pgSz=20&o=Relevance&flt=true")
         driver.get(self.url)
         
         return driver
