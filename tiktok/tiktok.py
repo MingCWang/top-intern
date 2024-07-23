@@ -14,7 +14,7 @@ class Tiktok(Scrape):
         '''find the container that contains the job data'''
         try:
             job_container = WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.CSS_SELECTOR, 'div.rightBlock.rightBlock__2ZGFh')))
-            job_list = job_container.find_elements(By.CSS_SELECTOR, 'div.listItems__1q9i5')
+            job_list = job_container.find_elements(By.CSS_SELECTOR, 'div.listItems__1q9i5 > a')
             return job_list
         except Exception as e:
             print('Error in find_job_list', e)
