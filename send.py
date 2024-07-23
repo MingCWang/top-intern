@@ -3,8 +3,8 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import json
 import os
-from meta.meta import Meta
-from tiktok.tiktok import Tiktok
+from companies.meta.meta import Meta
+from companies.tiktok.tiktok import Tiktok
 
 def send_email(job_data):
     # Email configuration
