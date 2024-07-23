@@ -21,10 +21,10 @@ def send_email(job_data):
     for job in job_data:
         company = job[-1]['company']
         if job[-2]['status'] == 'failed':
-            body += f'<p style="font-family: Arial, sans-serif; font-size: 14px; color: red;">Scraping for {company} failed :(</p>'
+            body += f'<p style="font-family: Arial, sans-serif; font-size: 16px; color: red;">Scraping for {company} failed :(</p>'
             print(f'Scraping {company} failed!')
         elif len(job) - 2 == 0:
-            body += f'<p style="font-family: Arial, sans-serif; font-size: 14px;">No new {company} jobs found</p>'
+            body += f'<p style="font-family: Arial, sans-serif; font-size: 16px;">No new {company} jobs found</p>'
             print(f'No new jobs {company} found!')
         elif job[-2]['status'] == 'completed':
             job.pop()  # remove the status key

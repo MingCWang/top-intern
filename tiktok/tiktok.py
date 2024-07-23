@@ -23,7 +23,7 @@ class Tiktok(Scrape):
     def get_job_data(self, job_list, i, driver):
         '''get the job data from the container in json format'''
         try: 
-            job_url = job_list[i].find_element(By.CSS_SELECTOR, 'a').get_attribute('href')    
+            job_url = job_list[i].get_attribute('href')    
             job_name = job_list[i].find_element(By.CSS_SELECTOR, 'span.positionItem-title-text > span.content__3ZUKJ.clamp-content').text 
             job_data = {
                 'jobName': job_name,
