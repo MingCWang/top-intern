@@ -17,11 +17,11 @@ class Scrape:
         self.data_list = self.scraper(self.driver)
         
     def run(self):
-        with open(f"{self.company}/data.json", "r") as file:
+        with open(f"companies/{self.company}/data.json", "r") as file:
             old_data = json.load(file)
 
         if len(old_data) == 0: 
-            with open(f"{self.company}/new.json", "w") as file:
+            with open(f"companies/{self.company}/new.json", "w") as file:
                 json.dump(self.data_list, file, indent=4)
             return self.data_list
         else:    
@@ -36,9 +36,9 @@ class Scrape:
                     continue
                 new_list.append(self.data_list[i])
                 
-            with open(f"{self.company}/new.json", "w") as file:
+            with open(f"companies/{self.company}/new.json", "w") as file:
                 json.dump(new_list, file, indent=4)
-        with open(f"{self.company}/data.json", "w") as file:
+        with open(f"companies/{self.company}/data.json", "w") as file:
                 json.dump(self.data_list, file, indent=4)
         print("\n========== DOWNLOAD COMPLETED ===========\n")
         
