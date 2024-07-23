@@ -1,8 +1,8 @@
-# top-intern
+# top-intern (under development)
 
 ## Purpose
 
-_**This is a system that sends notifications exclusively on FAANG internship/new grad positions in the United States. (updates every hour).**_
+_**This is a system that sends notifications exclusively on FAANG plus (tiktok, hubspot) internship/new grad positions in the United States. (updates every hour).**_
 
 Many existing github repositories provide lists of internships and new grad positions. However, I find these repositories are often out of date. For the up-to-date ones, there's no way for me to receive notifications only from the companies I care about, over time I stopped checking notifications. For someone who is aiming for the top of the top positions, applying early could be more valuable than getting a referral, so it is important to have the most up-to-date information, but also not have to waste time checking the company pages constantly (more time to leetcode of course).
 
