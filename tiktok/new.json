@@ -1,7 +1,35 @@
 [
     {
-        "jobName": "https://careers.tiktok.com/position/7394316025958828325/detail",
-        "jobURL": "[HackerRank] Software Engineer Graduate (TikTok Short Video) - 2025 Start (Bachelors/Master)"
+        "jobName": "[HackerRank] Software Engineer Graduate (TikTok Short Video) - 2025 Start (Bachelors/Master)",
+        "jobURL": "https://careers.tiktok.com/position/7394316025958828325/detail"
+    },
+    {
+        "jobName": "[HackerRank] Software Engineer Graduate (TikTok Short Video) - 2025 Start (Bachelors/Master)",
+        "jobURL": "https://careers.tiktok.com/position/7394314674919721266/detail"
+    },
+    {
+        "jobName": "Machine Learning Engineer Graduate (On-Device AI) - 2025 Start (PhD)",
+        "jobURL": "https://careers.tiktok.com/position/7392872597179123994/detail"
+    },
+    {
+        "jobName": "Software Engineer Graduate (AI Platform) - 2025 Start (PhD)",
+        "jobURL": "https://careers.tiktok.com/position/7392761878899050789/detail"
+    },
+    {
+        "jobName": "Software Engineer Graduate (On-Device AI) - 2025 Start (BS/MS)",
+        "jobURL": "https://careers.tiktok.com/position/7392866498240891163/detail"
+    },
+    {
+        "jobName": "[HackerRank] Software Engineer Graduate (AI Platform) - 2025 Start (BS/MS)",
+        "jobURL": "https://careers.tiktok.com/position/7392755640764385587/detail"
+    },
+    {
+        "jobName": "Software Development Engineer in Test Graduate (TikTok Eng - Testing Team) - 2025 Start (BS/MS)",
+        "jobURL": "https://careers.tiktok.com/position/7394528085263894794/detail"
+    },
+    {
+        "jobName": "Machine Learning Engineer Graduate (E-Commerce Knowledge Graph - CV/Multimodal/NLP)- 2024 Start (MS)",
+        "jobURL": "https://careers.tiktok.com/position/7288458427130775863/detail"
     },
     {
         "status": "completed"
