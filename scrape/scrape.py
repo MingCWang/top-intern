@@ -17,15 +17,16 @@ class Scrape:
         self.data_list = self.scraper(self.driver)
         
     def run(self):
+        new_list = []
+        
         with open(f"companies/{self.company}/data.json", "r") as file:
             old_data = json.load(file)
 
         if len(old_data) == 0: 
             with open(f"companies/{self.company}/new.json", "w") as file:
                 json.dump(self.data_list, file, indent=4)
+            new_list = self.data_list
         else:    
-            new_list = []
-        
             for i in range(len(self.data_list)):
                 if i == len(self.data_list) - 2:
                     new_list.append(self.data_list[-2])
@@ -37,13 +38,14 @@ class Scrape:
                 
             with open(f"companies/{self.company}/new.json", "w") as file:
                 json.dump(new_list, file, indent=4)
+            
         with open(f"companies/{self.company}/data.json", "w") as file:
                 json.dump(self.data_list, file, indent=4)
-                return self.data_list
             
         print("\n========== DOWNLOAD COMPLETED ===========\n")
         
         return new_list
+        
 
     def driver(self):
         '''creates driver instance'''
