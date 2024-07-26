@@ -1,26 +1,6 @@
 [
     {
-        "jobName": "Research Scientist, Demography and Survey Science (University Grad)",
-        "jobURL": "https://www.metacareers.com/jobs/434907095687972/"
-    },
-    {
-        "jobName": "Software Engineer, Machine Learning",
-        "jobURL": "https://www.metacareers.com/jobs/434907095687972/"
-    },
-    {
-        "jobName": "Production Engineer (University Grad)",
-        "jobURL": "https://www.metacareers.com/jobs/434907095687972/"
-    },
-    {
-        "jobName": "Enterprise Network Engineer, University Grad",
-        "jobURL": "https://www.metacareers.com/jobs/434907095687972/"
-    },
-    {
-        "jobName": "ASIC Engineer, Machine Learning Architecture (PhD)",
-        "jobURL": "https://www.metacareers.com/jobs/434907095687972/"
-    },
-    {
-        "status": "completed"
+        "status": "failed"
     },
     {
         "company": "meta"
