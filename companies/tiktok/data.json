@@ -1,17 +1,5 @@
 [
     {
-        "jobName": "Product Manager Graduate (TikTok-PGC) - 2025 Start (BS/MS)",
-        "jobURL": "https://careers.tiktok.com/position/7400856444339800371/detail"
-    },
-    {
-        "jobName": "Product Manager Graduate (TikTok-Product-Social and Creation) - 2025 Start (BS/MS)",
-        "jobURL": "https://careers.tiktok.com/position/7400808756194461961/detail"
-    },
-    {
-        "jobName": "Product Designer Graduate (TikTok-Design-Platform) - 2025 Start (BS/MS)",
-        "jobURL": "https://careers.tiktok.com/position/7400848217086871846/detail"
-    },
-    {
         "jobName": "iOS Software Engineer Graduate (TikTok MultiMedia, Video on Demand) - 2025 Start (BS/MS)",
         "jobURL": "https://careers.tiktok.com/position/7397890411420895498/detail"
     },
@@ -20,24 +8,36 @@
         "jobURL": "https://careers.tiktok.com/position/7397886343978813705/detail"
     },
     {
+        "jobName": "Product Manager Graduate (TikTok-Product-Social and Creation) - 2025 Start (BS/MS)",
+        "jobURL": "https://careers.tiktok.com/position/7400808756194461961/detail"
+    },
+    {
+        "jobName": "Product Manager Graduate (TikTok-PGC) - 2025 Start (BS/MS)",
+        "jobURL": "https://careers.tiktok.com/position/7400856444339800371/detail"
+    },
+    {
         "jobName": "iOS Software Engineer Graduate (TikTok Design Systems) - 2025 Start (BS/MS)",
         "jobURL": "https://careers.tiktok.com/position/7397884485129881866/detail"
     },
     {
-        "jobName": "Software Engineer Graduate (Business Risk Integrated Control) - 2025 Start (BS/MS)",
-        "jobURL": "https://careers.tiktok.com/position/7397962408008993034/detail"
-    },
-    {
-        "jobName": "Machine Learning Engineer Graduate (Data-Search-TikTok.US - San Jose) - 2025 Start (BS/MS)",
-        "jobURL": "https://careers.tiktok.com/position/7397554494474602803/detail"
-    },
-    {
-        "jobName": "Partnerships Operations Manager Graduate (TikTok LIVE-AMS) - 2025 Start (BS/MS)",
-        "jobURL": "https://careers.tiktok.com/position/7397212789892565257/detail"
+        "jobName": "Social Data Science Graduate (TikTok-Product-Data Science-Social) - 2025 Start (MS/PhD)",
+        "jobURL": "https://careers.tiktok.com/position/7400806482000316682/detail"
     },
     {
         "jobName": "Software Engineer Graduate (TikTok Music) - 2025 Start (BS/MS)",
         "jobURL": "https://careers.tiktok.com/position/7398062877409773850/detail"
+    },
+    {
+        "jobName": "Product Designer Graduate (TikTok-Design-Platform) - 2025 Start (BS/MS)",
+        "jobURL": "https://careers.tiktok.com/position/7400848217086871846/detail"
+    },
+    {
+        "jobName": "Android Software Engineer Graduate (TikTok Media Product) - 2025 Start (BS/MS)",
+        "jobURL": "https://careers.tiktok.com/position/7398009419605018931/detail"
+    },
+    {
+        "jobName": "Software Engineer Graduate (Business Risk Integrated Control) - 2025 Start (BS/MS)",
+        "jobURL": "https://careers.tiktok.com/position/7397962408008993034/detail"
     },
     {
         "status": "completed"
